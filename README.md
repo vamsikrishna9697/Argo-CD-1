@@ -335,8 +335,3 @@ argocd app delete argocd-demo
 `Kubernetes` · `Argo CD` · `AWS EC2` · `AWS ELB` · `GitHub` · `kubectl`
 
 ---
-
-## 👤 Author
-
-**Vamsi**
-Feel free to ⭐ the repo if you found it helpful!
