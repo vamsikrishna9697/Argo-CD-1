@@ -1,0 +1,28 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deployment
+  namespace: vamsi
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: foodapp
+  template:
+    metadata:
+      labels:
+        app: foodapp
+    spec:
+      containers:
+      - name: cont-1
+        image: vamsikrishnakakani/vamsi-repo:foodapp
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            cpu: 50m
+            memory: 128Mi
+          limits:
+            cpu: 100m
+            memory: 256Mi
