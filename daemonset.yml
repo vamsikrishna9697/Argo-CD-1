@@ -1,0 +1,24 @@
+---
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: my-daemonset
+  namespace: vamsi
+spec:
+  selector:
+    matchLabels:
+      app: foodapp-daemon
+  template:
+    metadata:
+      labels:
+        app: foodapp-daemon
+    spec:
+      containers:
+      - name: cont-1
+        image: vamsikrishnakakani/vamsi-repo:foodapp
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            cpu: 50m
+            memory: 64Mi
