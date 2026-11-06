@@ -5,7 +5,7 @@ metadata:
   name: my-deployment
   namespace: vamsi
 spec:
-  replicas: 3
+  replicas: 5
   selector:
     matchLabels:
       app: foodapp
